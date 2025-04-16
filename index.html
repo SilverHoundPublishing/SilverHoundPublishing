@@ -105,8 +105,8 @@
       opacity: 1;
       transform: translateY(0);
     }
-shimmer-line {
-  height: 4px;
+.shimmer-line {
+  height: 3px;
     background: linear-gradient(
     90deg,
     #d9d9d9,
@@ -119,6 +119,8 @@ shimmer-line {
   animation: shimmer 1.2s infinite linear;
   margin: 20px auto;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+ position: relative;
+  z-index: 1;
 }
 @keyframes shimmer {
   0% {
@@ -161,7 +163,7 @@ shimmer-line {
   background-size: 300% 300%;
   animation: shimmerGlitter 5s linear infinite;
   mix-blend-mode: screen;
-  z-index: 9999;
+  z-index: 0;
 }
 
 @keyframes shimmerGlitter {
