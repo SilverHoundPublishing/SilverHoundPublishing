@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Silver Hound Publishing</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    .tagline-stack {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.tagline-stack span {
+  display: block;
+  color: #ffffff;
+}
+
+.tagline-stack span:nth-child(1) { opacity: 0.2; }
+.tagline-stack span:nth-child(2) { opacity: 0.4; }
+.tagline-stack span:nth-child(3) { opacity: 0.6; }
+.tagline-stack span:nth-child(4) { opacity: 0.8; }
+.tagline-stack span:nth-child(5) { opacity: 1; }
+
     * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
@@ -17,7 +38,7 @@
     }
     header {
       background-color: #0d0d0d;
-      padding: 60px 20px;
+      padding: 50px 20px;
       text-align: center;
      /* border-bottom: 1px solid #999; */
     }
@@ -26,7 +47,7 @@
   font-weight: 700;
   font-size: 4em;
   color: #d4d4dc;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
     
@@ -185,7 +206,13 @@
 <div class="glitter-effect"></div>
 <header>
   <h1>Silver Hound Publishing</h1>
-  <p class="tagline">Stories that bite.</p>
+  <div class="tagline-stack">
+  <span>Stories That Bite</span>
+  <span>Stories That Bite</span>
+  <span>Stories That Bite</span>
+  <span>Stories That Bite</span>
+  <span>Stories That Bite</span>
+</div>
 </header>
 
 <div class="shimmer-line"></div>
