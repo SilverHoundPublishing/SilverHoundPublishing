@@ -11,31 +11,27 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  padding: 40px 5vw 0;
   width: 100%;
-  padding: 40px 5vw;
   box-sizing: border-box;
 }
 
 .tagline-stack {
   font-family: 'Special Elite', cursive;
-  font-size: 3.5em;
-  line-height: 1.2;
-  letter-spacing: 3px;
+  font-size: 2.6em;
+  line-height: 1; /* remove extra spacing */
+  letter-spacing: 1.5px;
   flex: 1;
-  min-width: 250px;
+  min-width: 200px;
+  white-space: nowrap;
 }
 
 .tagline-stack span {
   display: block;
+  margin: 0;
+  padding: 0;
 }
-
-.tagline-stack span:nth-child(1) { opacity: 1; }
-.tagline-stack span:nth-child(2) { opacity: 0.8; }
-.tagline-stack span:nth-child(3) { opacity: 0.6; }
-.tagline-stack span:nth-child(4) { opacity: 0.4; }
-.tagline-stack span:nth-child(5) { opacity: 0.2; }
 
 .tagline-stack.left {
   text-align: left;
@@ -52,8 +48,9 @@
 
 .tagline-stack.right {
   text-align: right;
-  color: #eae3d2;
+  color: #f5ebd5;
 }
+
 
     * {
       margin: 0; padding: 0; box-sizing: border-box;
@@ -264,14 +261,13 @@
   </div>
 
   <div class="tagline-stack right">
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
+    <span>Stories With Teeth</span>
+    <span>Stories With Teeth</span>
+    <span>Stories With Teeth</span>
+    <span>Stories With Teeth</span>
+    <span>Stories With Teeth</span>
   </div>
 </div>
-
 
 
 <section id="about" class="fade-in">
