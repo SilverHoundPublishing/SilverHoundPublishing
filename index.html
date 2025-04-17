@@ -1,138 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
-   <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Silver Hound Publishing</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:<wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-
-.main-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 40px 20px;
-  text-align: left;
-  max-width: 900px;
-  margin: auto;
-  flex-direction: row; /* logo will now sit on the right */
-}
-
-.logo {
-  max-height: 120px;
-  width: auto;
-}
-
-.title-block h1 {
-  text-align: center;
-  margin: 0;
-  line-height: 1.2;
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  /* color: #d4d4dc; */
-Color: #f4f5f5
-  font-size: 2.8em;
-}
-.subheading {
-  font-size: 2.2em;
-  margin-top: 0.3em;
-}
-
-.tagline-trio {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 40px 5vw 0;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 60px;
-}
-
-.tagline-stack {
-  font-family: 'Special Elite', cursive;
-  font-size: 2.6em;
-  line-height: 1;
-  letter-spacing: 1.5px;
-  flex: 1;
-  min-width: 200px;
-  /* REMOVE this line below */
-  /* white-space: nowrap; */
-}
-
-  .tagline-stack span {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-
-.tagline-stack.left {
-  text-align: left;
-  color: #fff3d0;
-}
-
-.tagline-stack.center {
-  text-align: center;
-}
-
-.tagline-stack.center span {
-  background: linear-gradient(90deg, #ff6a6a, #c94c4c, #b43b3b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-
-.tagline-stack.right {
-  text-align: right;
-  color: #f5ebd5;
-}
-.tagline-stack span:nth-child(1) { opacity: 1; }
-.tagline-stack span:nth-child(2) { opacity: 0.85; }
-.tagline-stack span:nth-child(3) { opacity: 0.6; }
-.tagline-stack span:nth-child(4) { opacity: 0.35; }
-.tagline-stack span:nth-child(5) { opacity: 0.15; }
-
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #0d0d0d;
-      color:  #f5f0e1;
+      color: #f5f0e1;
       scroll-behavior: smooth;
     }
-    header {
-      background-color: #0d0d0d;
-      padding: 50px 20px;
-      text-align: center;
-     /* border-bottom: 1px solid #999; */
-    }
-   header h1 {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  font-size: 4em;
-  color: #d4d4dc;
-  margin-bottom: 5px;
-}
 
-    
-    header p {
-      font-size: 1.2em;
-      color: #e0e0e0;
+    .glitter-effect {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      pointer-events: none;
+      background: linear-gradient(130deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.03) 75%);
+      background-size: 300% 300%;
+      animation: shimmerGlitter 5s linear infinite;
+      mix-blend-mode: screen;
+      z-index: 0;
     }
+
+    @keyframes shimmerGlitter {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
+    }
+
+    .shimmer-line {
+      height: 3px;
+      background: linear-gradient(90deg, #d9d9d9, #ffffff, #bfbfbf, #ffffff, #d9d9d9);
+      background-size: 400% 100%;
+      animation: shimmer 1.2s infinite linear;
+      margin: 5px auto;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .main-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .logo {
+      max-height: 120px;
+      width: auto;
+    }
+
+    .title-block h1 {
+      margin: 0;
+      line-height: 1.2;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      font-size: 2.8em;
+      color: #f4f5f5;
+    }
+
+    .subheading {
+      font-size: 2.2em;
+      margin-top: 0.3em;
+    }
+
     nav {
       background: #0d0d0d;
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  padding: 10px 0;
-  margin-top: 0;
-  margin-bottom: 0;
-     /*  border-bottom: 1px solid #444; */
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      margin-bottom: 0;
     }
+
     nav a {
       color: #eae3d2;
       text-decoration: none;
@@ -140,42 +99,82 @@ Color: #f4f5f5
       padding: 5px;
       transition: color 0.3s;
     }
-    nav a:hover  {
+
+    nav a:hover {
       color: #fff9ed;
     }
+
+    .tagline-trio {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 40px 5vw 0;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 60px;
+    }
+
+    .tagline-stack {
+      font-family: 'Special Elite', cursive;
+      font-size: 2.6em;
+      line-height: 1;
+      letter-spacing: 1.5px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .tagline-stack span {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tagline-stack.left {
+      text-align: left;
+      color: #fff3d0;
+    }
+
+    .tagline-stack.center {
+      text-align: center;
+    }
+
+    .tagline-stack.center span {
+      background: linear-gradient(90deg, #ff6a6a, #c94c4c, #b43b3b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline-stack.right {
+      text-align: right;
+      color: #f5ebd5;
+    }
+
+    .tagline-stack span:nth-child(1) { opacity: 1; }
+    .tagline-stack span:nth-child(2) { opacity: 0.85; }
+    .tagline-stack span:nth-child(3) { opacity: 0.6; }
+    .tagline-stack span:nth-child(4) { opacity: 0.35; }
+    .tagline-stack span:nth-child(5) { opacity: 0.15; }
+
     section {
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
-   h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 2em;
-  color: #eae3d2;
-  margin-bottom: 20px;
-}
-  /*  .books {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 2em;
+      color: #eae3d2;
+      margin-bottom: 20px;
     }
-    .book {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      padding: 15px;
-      text-align: center;
-    }
-    .book img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      margin-bottom: 10px; *\
-    }
+
     .contact a {
       color: #eae3d2;
       text-decoration: underline;
     }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -184,7 +183,6 @@ Color: #f4f5f5
       font-size: 0.9em;
     }
 
-    /* Fade-in animation */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -195,121 +193,48 @@ Color: #f4f5f5
       opacity: 1;
       transform: translateY(0);
     }
-.shimmer-line {
-  height: 3px;
-    background: linear-gradient(
-    90deg,
-    #d9d9d9,
-    #ffffff,
-    #bfbfbf,
-    #ffffff,
-    #d9d9d9
-  );
-  background-size: 400% 100%;
-  animation: shimmer 1.2s infinite linear;
-  margin: 5px auto;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
- position: relative;
-  z-index: 1;
-}
-@keyframes shimmer {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
 
-.glitter-line {
-  height: 4px;
-  background-image: url("PATH/TO/YOUR/GLITTER.png");
-  background-size: cover;
-  background-repeat: repeat-x;
-  animation: glitterScroll 5s linear infinite;
-  margin: 20px auto;
-}
-
-@keyframes glitterScroll {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-.glitter-effect {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  background: linear-gradient(
-    130deg,
-    rgba(255,255,255,0.03) 25%,
-    rgba(255,255,255,0.2) 50%,
-    rgba(255,255,255,0.03) 75%
-  );
-  background-size: 300% 300%;
-  animation: shimmerGlitter 5s linear infinite;
-  mix-blend-mode: screen;
-  z-index: 0;
-}
-
-@keyframes shimmerGlitter {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 100% 100%; }
-}
     @media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      .main-header {
+        flex-direction: column;
+        text-align: center;
+      }
 
-  .logo {
-    max-height: 100px;
-    margin-top: 20px;
-  }
+      .logo {
+        max-height: 100px;
+        margin-top: 20px;
+      }
 
-  .title-block h1 {
-    font-size: 2.2em;
-  }
+      .title-block h1 {
+        font-size: 2.2em;
+      }
 
-  .title-block .subheading {
-    font-size: 1.4em;
-    margin-top: 8px;
-  }
+      .subheading {
+        font-size: 1.4em;
+      }
 
-  .tagline-trio {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-    padding: 20px 5vw;
-  }
+      .tagline-trio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-  .tagline-stack {
-    font-size: 2em;
-  }
+      .tagline-stack {
+        font-size: 2em;
+      }
 
-  nav {
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px 5px;
-  }
-
-  nav a {
-    margin: 5px 10px;
-    font-size: 1em;
-  }
-
+      nav a {
+        margin: 5px 10px;
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
-<div class="shimmer-line"></div>
+
 <div class="glitter-effect"></div>
 
+<!-- HEADER -->
 <header class="main-header">
   <div class="title-block">
     <h1>Silver Hound</h1>
@@ -318,26 +243,22 @@ Color: #f4f5f5
   <img src="logo.png" alt="Silver Hound Logo" class="logo">
 </header>
 
+<!-- DOUBLE LINE ABOVE NAV -->
+<div class="shimmer-line"></div>
 <div class="shimmer-line"></div>
 
-<div class="shimmer-line"></div>
-
+<!-- NAVIGATION -->
 <nav>
-
- <!-- <a href="#books">Books</a> -->
-
   <a href="#about">About</a>
   <a href="#approach">Our Approach</a>
- <!--  <a href="#books">Books</a> -->
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- DOUBLE LINE BELOW NAV -->
+<div class="shimmer-line"></div>
 <div class="shimmer-line"></div>
 
-<main>
-  
-<div class="shimmer-line"></div>
-
+<!-- TAGLINES -->
 <div class="tagline-trio">
   <div class="tagline-stack left">
     <span>Stories Off Leash</span>
@@ -364,122 +285,81 @@ Color: #f4f5f5
   </div>
 </div>
 
+<!-- CONTENT -->
+<main>
+  <section id="about" class="fade-in">
+    <h2>About Silver Hound</h2>
+    <p>Silver Hound Publishing is a small press with a sharp bite.</p>
+    <p>Founded by two writers who wanted more from the page, we exist to bring back grit, guts, and storytelling with a cinematic punch.<br/>
+    We don’t publish for trends. We publish for tension.</p>
+    <p>We champion bold, character-driven fiction — stories that live in shadows, spill secrets, and punch harder than they’re supposed to.</p>
+    <p>We’re not afraid of the weird ones. The stylish, twisted, talk-too-much-and-fight-too-hard ones.<br/>
+    If it makes you laugh, shiver, or question everything — we’re in.</p>
+  </section>
 
-<section id="about" class="fade-in">
-  <h2>About Silver Hound</h2>
-  <p>Silver Hound Publishing is a small press with a sharp bite.</p>
+  <section id="approach" class="fade-in">
+    <h2>Our Approach</h2>
+    <p>We treat every book like a film in the making.</p>
+    <p>From the first line to the final punctuation mark, we look for rhythm, voice, and momentum.<br/>
+    We edit like directors. Publish like producers.</p>
+    <p>We don’t do conveyor belts. We’re a workshop. A studio.<br/>
+    A place where vision matters more than tradition — and risk is rewarded.</p>
+    <p>Pacing matters. Dialogue matters. Voice is everything.<br/>
+    If it isn’t unforgettable, it isn’t ready.</p>
+    <p>We’re not here to play safe. We’re here to make noise.</p>
+  </section>
 
-  <p>Founded by two writers who wanted more from the page, we exist to bring back grit, guts, and storytelling with a cinematic punch.<br/>
-  We don’t publish for trends. We publish for tension.</p>
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p class="contact" style="text-align: center; margin-bottom: 20px;">
+      Or email us at <a href="mailto:SilverHoundPublishing@gmail.com">SilverHoundPublishing@gmail.com</a>
+    </p>
+    <form action="https://formspree.io/f/xrbpvkng" method="POST" style="max-width: 600px; margin: auto;">
+      <label for="name">Name:</label><br/>
+      <input type="text" id="name" name="name" required><br/>
 
-  <p>We champion bold, character-driven fiction — stories that live in shadows, spill secrets, and punch harder than they’re supposed to.</p>
+      <label for="email">Email:</label><br/>
+      <input type="email" id="email" name="_replyto" required><br/>
 
-  <p>We’re not afraid of the weird ones. The stylish, twisted, talk-too-much-and-fight-too-hard ones.<br/>
-  If it makes you laugh, shiver, or question everything — we’re in.</p>
-</section>
+      <label for="message">Message:</label><br/>
+      <textarea id="message" name="message" rows="5" required></textarea><br/>
 
-<section id="approach" class="fade-in">
-  <h2>Our Approach</h2>
-  <p>We treat every book like a film in the making.</p>
-
-  <p>From the first line to the final punctuation mark, we look for rhythm, voice, and momentum.<br/>
-  We edit like directors. Publish like producers.<br/>
-  Every story we work on is pushed to its full, brutal potential — not just polished, but sharpened.</p>
-
-  <p>We don’t do conveyor belts.<br/>
-  We’re a workshop. A studio.<br/>
-  A place where vision matters more than tradition — and risk is rewarded.</p>
-
-  <p>Pacing matters. Dialogue matters. Voice is everything.<br/>
-  If it isn’t unforgettable, it isn’t ready.</p>
-
-  <p>We’re not here to play safe.<br/>
-  We’re here to make noise.</p>
-</section>
-<!--
-<section id="books" class="fade-in">
-  <h2>Our Books</h2>
-  <div class="books">
-    <div class="book">
-      <img src="https://via.placeholder.com/150x200?text=Book+1" alt="Book 1">
-      <p><strong>Book Title One</strong><br/>Author Name</p>
-    </div>
-    <div class="book">
-      <img src="https://via.placeholder.com/150x200?text=Book+2" alt="Book 2">
-      <p><strong>Book Title Two</strong><br/>Author Name</p>
-    </div>
-    <div class="book">
-      <img src="https://via.placeholder.com/150x200?text=Book+3" alt="Book 3">
-      <p><strong>Book Title Three</strong><br/>Author Name</p>
-    </div>
-  </div>
-</section>
--->
-
-<section id="contact" class="fade-in">
-  <h2>Contact</h2>
-
-  <p class="contact" style="text-align: center; margin-bottom: 20px;">
-    Or email us at <a href="mailto:SilverHoundPublishing@gmail.com">SilverHoundPublishing@gmail.com</a>
-  </p>
-
-  <form action="https://formspree.io/f/xrbpvkng" method="POST" style="max-width: 600px; margin: auto;">
-    <label for="name">Name:</label><br/>
-    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #1a1a1a; border: 1px solid #444; color: #f2f2f2;"><br/>
-
-    <label for="email">Email:</label><br/>
-    <input type="email" id="email" name="_replyto" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #1a1a1a; border: 1px solid #444; color: #f2f2f2;"><br/>
-
-    <label for="message">Message:</label><br/>
-    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; background-color: #1a1a1a; border: 1px solid #444; color: #f2f2f2;"></textarea><br/>
-
-    <button type="submit" style="background-color: #d4d4dc; color: #0d0d0d; padding: 10px 20px; border: none; cursor: pointer;">Send</button>
-  </form>
-</section>
-
-<div class="shimmer-line"></div>
-
+      <button type="submit">Send</button>
+    </form>
+  </section>
 </main>
-  
+
+<!-- FOOTER -->
 <footer>
   &copy; 2025 Silver Hound Publishing. All rights reserved.
 </footer>
 
+<!-- Tawk.to Live Chat -->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/68016367b9debf190a6cb5a9/1ip2mok3p';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
 
+<!-- Fade-in on scroll -->
 <script>
   const faders = document.querySelectorAll('.fade-in');
-
-  const appearOptions = {
-    threshold: 0.1
-  };
-
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  const appearOptions = { threshold: 0.1 };
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     });
   }, appearOptions);
-
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  faders.forEach(fader => appearOnScroll.observe(fader));
 </script>
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/68016367b9debf190a6cb5a9/1ip2mok3p';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 
 </body>
 </html>
-
