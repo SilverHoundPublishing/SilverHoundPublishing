@@ -20,14 +20,15 @@
 .tagline-stack {
   font-family: 'Special Elite', cursive;
   font-size: 2.6em;
-  line-height: 1; /* remove extra spacing */
+  line-height: 1;
   letter-spacing: 1.5px;
   flex: 1;
   min-width: 200px;
-  white-space: nowrap;
+  /* REMOVE this line below */
+  /* white-space: nowrap; */
 }
 
-.tagline-stack span {
+  .tagline-stack span {
   display: block;
   margin: 0;
   padding: 0;
@@ -40,17 +41,20 @@
 
 .tagline-stack.center {
   text-align: center;
+}
+
+.tagline-stack.center span {
   background: linear-gradient(90deg, #ff6a6a, #c94c4c, #b43b3b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #ffaaaa; /* fallback */
 }
+
 
 .tagline-stack.right {
   text-align: right;
   color: #f5ebd5;
 }
-    .tagline-stack span:nth-child(1) { opacity: 1; }
+.tagline-stack span:nth-child(1) { opacity: 1; }
 .tagline-stack span:nth-child(2) { opacity: 0.85; }
 .tagline-stack span:nth-child(3) { opacity: 0.6; }
 .tagline-stack span:nth-child(4) { opacity: 0.35; }
