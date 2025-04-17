@@ -7,18 +7,24 @@
   <title>Silver Hound Publishing</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+.tagline-trio {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
+  padding: 40px 5vw;
+  box-sizing: border-box;
+}
+
 .tagline-stack {
   font-family: 'Special Elite', cursive;
-  font-size: 2.8em;
-  color: #eae3d2;
-  text-align: justify;
-  line-height: 1.2;
-  letter-spacing: 5px;
-  width: 100%;
-  max-width: 100%;
-  padding: 0 40px;
-  margin: 60px auto 40px;
-  box-sizing: border-box;
+  font-size: 2.2em;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  flex: 1;
+  min-width: 250px;
 }
 
 .tagline-stack span {
@@ -27,9 +33,23 @@
 
 .tagline-stack span:nth-child(1) { opacity: 1; }
 .tagline-stack span:nth-child(2) { opacity: 0.8; }
-.tagline-stack span:nth-child(3) { opacity: 0.6; }
-.tagline-stack span:nth-child(4) { opacity: 0.4; }
-.tagline-stack span:nth-child(5) { opacity: 0.2; }
+.tagline-stack span:nth-child(3) { opacity: 0.5; }
+.tagline-stack span:nth-child(4) { opacity: 0.3; }
+
+.tagline-stack.left {
+  text-align: left;
+  color: #fff3d0;
+}
+
+.tagline-stack.center {
+  text-align: center;
+  color: #ffe8a3;
+}
+
+.tagline-stack.right {
+  text-align: right;
+  color: #eae3d2;
+}
 
     * {
       margin: 0; padding: 0; box-sizing: border-box;
@@ -222,13 +242,29 @@
   
 <div class="shimmer-line"></div>
 
-<div class="tagline-stack">
-  <span>Stories That Bite</span>
-  <span>Stories That Bite</span>
-  <span>Stories That Bite</span>
-  <span>Stories That Bite</span>
-  <span>Stories That Bite</span>
+<div class="tagline-trio">
+  <div class="tagline-stack left">
+    <span>Stories Off Leash</span>
+    <span>Stories Off Leash</span>
+    <span>Stories Off Leash</span>
+    <span>Stories Off Leash</span>
+  </div>
+
+  <div class="tagline-stack center">
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+  </div>
+
+  <div class="tagline-stack right">
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+  </div>
 </div>
+
 
 <section id="about" class="fade-in">
   <h2>About Silver Hound</h2>
