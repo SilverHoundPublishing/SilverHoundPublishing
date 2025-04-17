@@ -36,11 +36,13 @@
     }
     nav {
       background: #0d0d0d;
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: center;
-      padding: 10px 0;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 0;
+  margin-bottom: 0;
      /*  border-bottom: 1px solid #444; */
     }
     nav a {
@@ -117,7 +119,7 @@
   );
   background-size: 400% 100%;
   animation: shimmer 1.2s infinite linear;
-  margin: 20px auto;
+  margin: 5px auto;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
  position: relative;
   z-index: 1;
@@ -170,14 +172,20 @@
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 100%; }
 }
-
+.tagline {
+  color: #f8f8f8;
+  font-weight: 600;
+  text-shadow: 1px 1px 6px rgba(255, 255, 255, 0.3);
+  letter-spacing: 1px;
+  font-style: italic;
+}
   </style>
 </head>
 <body>
 <div class="glitter-effect"></div>
 <header>
   <h1>Silver Hound Publishing</h1>
-  <p><em>Stories that bite.</em></p>
+  <p class="tagline">Stories that bite.</p>
 </header>
 
 <div class="shimmer-line"></div>
