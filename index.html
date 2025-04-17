@@ -13,16 +13,16 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 100%;
+  width: 100%;
   padding: 40px 5vw;
   box-sizing: border-box;
 }
 
 .tagline-stack {
   font-family: 'Special Elite', cursive;
-  font-size: 2.2em;
-  line-height: 1.1;
-  letter-spacing: 2px;
+  font-size: 3.5em;
+  line-height: 1.2;
+  letter-spacing: 3px;
   flex: 1;
   min-width: 250px;
 }
@@ -33,8 +33,9 @@
 
 .tagline-stack span:nth-child(1) { opacity: 1; }
 .tagline-stack span:nth-child(2) { opacity: 0.8; }
-.tagline-stack span:nth-child(3) { opacity: 0.5; }
-.tagline-stack span:nth-child(4) { opacity: 0.3; }
+.tagline-stack span:nth-child(3) { opacity: 0.6; }
+.tagline-stack span:nth-child(4) { opacity: 0.4; }
+.tagline-stack span:nth-child(5) { opacity: 0.2; }
 
 .tagline-stack.left {
   text-align: left;
@@ -43,7 +44,10 @@
 
 .tagline-stack.center {
   text-align: center;
-  color: #ffe8a3;
+  background: linear-gradient(90deg, #ff6a6a, #c94c4c, #b43b3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ffaaaa; /* fallback */
 }
 
 .tagline-stack.right {
@@ -248,22 +252,26 @@
     <span>Stories Off Leash</span>
     <span>Stories Off Leash</span>
     <span>Stories Off Leash</span>
+    <span>Stories Off Leash</span>
   </div>
 
   <div class="tagline-stack center">
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
-    <span>Stories That Bark</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
+    <span>Stories That Bite</span>
   </div>
 
   <div class="tagline-stack right">
-    <span>Stories That Bite</span>
-    <span>Stories That Bite</span>
-    <span>Stories That Bite</span>
-    <span>Stories That Bite</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
+    <span>Stories That Bark</span>
   </div>
 </div>
+
 
 
 <section id="about" class="fade-in">
