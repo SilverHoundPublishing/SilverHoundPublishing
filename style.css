@@ -9,7 +9,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #FFFAFA;
-  color: #111111;
+  color: #0f0f0f;
   line-height: 1.6;
 }
 
@@ -48,6 +48,9 @@ nav {
   background-color: #111111;
   padding: 10px 0;
   text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
 }
 
 nav a {
