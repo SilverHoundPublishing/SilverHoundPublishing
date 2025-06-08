@@ -69,13 +69,13 @@ nav a:hover {
   color: #c0c0c0;
 }
 
-/* Divider */
+/* Divider 
 .divider {
   width: 80%;
   height: 2px;
   background: linear-gradient(to right, #ccc, #aaa, #ccc);
   margin: 40px auto;
-  border-radius: 2px;
+  border-radius: 2px; */
 }
 
 /* Main Sections */
