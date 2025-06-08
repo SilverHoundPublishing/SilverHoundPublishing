@@ -51,6 +51,19 @@ nav {
   border-bottom: 1px solid #ddd;
 }
 
+nav a {
+  color: #f5f0e1; /* or #ffffff */
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #c0c0c0;
+}
+}
+
 }
 
 nav a {
